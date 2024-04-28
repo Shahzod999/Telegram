@@ -1,0 +1,66 @@
+.userInfo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 20px;
+    position: relative;
+
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    
+    button {
+      padding: 5px;
+      background-color: rgba(230, 74, 105, 0.553);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      
+      &:hover {
+        background-color: rgba(220, 20, 60, 0.796);
+      }
+      &.logout{
+        padding: 5px;
+        background-color: #1a73e8;
+      }
+      &:disabled{
+        opacity: 0;
+        cursor:default;
+      }
+    }
+  }
+}
+
+@media (max-width:500px) {
+  .userInfo{
+    /* flex-direction: column; */
+    gap: 2px;
+    .user {
+      gap: 5px;
+    }
+    .icons{
+      gap: 10px;
+    }
+  }
+}

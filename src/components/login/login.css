@@ -1,0 +1,85 @@
+.login {
+  display: grid;
+  place-items: center;
+  width: 500px;
+
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .WitRegisterSign {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      input {
+        padding: 20px;
+        border: none;
+        outline: none;
+        background-color: rgba(17, 25, 40, 0.6);
+        color: white;
+        border-radius: 5px;
+      }
+      label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        text-decoration: underline;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          object-fit: cover;
+          opacity: 0.6;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 20px;
+        border: none;
+        background-color: #1f8ef1;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #1f8ff19c;
+        }
+      }
+    }
+  }
+  .seperator {
+    /* position: absolute; */
+    bottom: 0;
+    border-bottom: 1px solid #dddddd35;
+    /* margin-bottom: 50px; */
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .login {
+    width: 300px;
+  }
+}
